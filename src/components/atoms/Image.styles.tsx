@@ -13,7 +13,8 @@ interface StyledImageProps {
 export const StyledImage = styled.img<StyledImageProps>`
   width: ${(props) => (props.width ? `${props.width}` : 'auto')};
   height: ${(props) => (props.height ? `${props.height}` : 'auto')};
-  
+  max-height: 28rem;
+  object-fit: cover;
   border-radius: 1rem;
 `;
 export default StyledImage;

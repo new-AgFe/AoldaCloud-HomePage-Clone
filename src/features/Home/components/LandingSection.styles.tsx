@@ -6,32 +6,26 @@ export const LandingSectionContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 2rem 0;
 `;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1300px; // 좌우 여백 고려
   width: 100%;
 `;
-export const TextContent = styled.div`
-  flex: 1;
-  padding: 1rem 2rem;
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-`;
 export const ImageWrapper = styled.div`
-  flex: 1;
+  flex: 9;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1.5rem;
+`;
+export const BlockWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
 `;
