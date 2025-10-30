@@ -1,0 +1,1 @@
+// src/features/Home/components/countingSection.styles.tsx
