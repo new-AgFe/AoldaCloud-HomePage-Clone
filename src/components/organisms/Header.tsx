@@ -1,5 +1,5 @@
 // src/components/organisms/Header.tsx
-import Button from '../atoms/Button';
+import LinkItem from '../atoms/LinkItem';
 import React from 'react';
 import useScrollDetection from '../../hooks/useScrollDetection';
 import { StyledHeader } from './Header.styles';
@@ -19,10 +19,10 @@ const Header: React.FC = () => {
           <Image src={Logo} alt="로고" height="100%" />
         </div>
 
-        <NavItems onNavItemClick={(item) => console.log(item)} />
+        <NavItems />
 
         <div className="right-button">
-          <Button theme="primary" onClick={() => {}}>콘솔로 이동 →</Button>
+          <LinkItem theme="primary" to='/console'>콘솔로 이동 →</LinkItem>
         </div>
     </StyledHeader>
   );
