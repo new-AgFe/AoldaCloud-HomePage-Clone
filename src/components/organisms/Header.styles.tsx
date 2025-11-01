@@ -1,6 +1,7 @@
 // src/components/organisms/Header.styles.tsx
 
 import styled, { css } from 'styled-components';
+import { tablet } from '../../styles/mixins/mediaQueries';
 
 interface StyledHeaderProps {
   $isScrolled: boolean;
@@ -17,10 +18,47 @@ export const StyledHeader = styled.header<StyledHeaderProps>`
   top: 1rem;
   background-color: rgba(255, 255, 255, 0.6); 
   z-index: 1000;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   align-items: center;
   justify-content: space-between;
   transition: all 0.2s ease-in-out; // 부드러운 전환 효과
+
+  .center-menu {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      
+      ${tablet(css`
+        display: none; 
+      `)}
+  }
+
+  .right-button {
+      ${tablet(css`
+          display: none; 
+      `)}
+  }
+  
+  ${tablet(css`
+      top: 0;
+      padding: 0.5rem;
+      width: 100%;
+      max-width: none;
+      background-color: white;
+      border-radius: 0;
+      left: 0;
+      transform: none;
+  `)}
+  
+  .hamburger-menu {
+      display: none; /* 데스크탑에서는 숨김 */
+
+      ${tablet(css`
+          /* 🚨 768px 이하에서 보이기 */
+          display: block; 
+          z-index: 1010; /* 헤더보다 위에 */
+      `)}
+  }
 
   ${(props) => 
     props.$isScrolled &&

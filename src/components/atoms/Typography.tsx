@@ -14,18 +14,18 @@ export interface TypographyProps {
 
 // 2. Styled Component를 사용한 실제 Typography 컴포넌트
 const Typography: React.FC<TypographyProps> = ({
-  children,
-  variant = 'body',
-  className,
+    children,
+    variant = 'body',
+    className,
 }) => {
-  return (
+    return (
     <StyledTypography
-      $variant={variant}
-      className={className}
+        $variant={variant}
+        className={className}
     >
-      {children}
+        {children}
     </StyledTypography>
-  );
+    );
 };
 
 export default Typography;

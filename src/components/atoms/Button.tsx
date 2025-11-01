@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyledButton } from './Button.styles'; // 스타일 컴포넌트 가져오기
 
-export type ButtonTheme = 'primary' | 'catchPhrase';
+export type ButtonTheme = 'primary' | 'secondary' | 'ghost';
 
 // 1. 컴포넌트가 외부에서 받을 Props 인터페이스 정의
 export interface ButtonProps {

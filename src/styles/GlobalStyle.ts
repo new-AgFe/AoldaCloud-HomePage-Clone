@@ -8,6 +8,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html, body, #root {
+    &::-webkit-scrollbar {
+      display: none; /* 스크롤바 자체를 안 보이게 만듭니다. */
+    }
+    -ms-overflow-style: none; /* IE 및 Edge */
+    scrollbar-width: none; /* Firefox */
     margin: 0 auto;
     padding: 0;
     /* (선택) 전체 화면 높이 설정 */
@@ -15,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     max-width: 100%;
     overflow-x: hidden; /* 가로 스크롤 방지 */
+    overflow-y: auto;
   }
 
   /* 2. 링크, 버튼 등 기본 스타일 초기화 (선택 사항) */

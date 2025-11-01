@@ -2,55 +2,65 @@
 
 import styled, { css } from 'styled-components';
 import { type LinkTheme } from './LinkItem';
+import { tablet } from '../../styles/mixins/mediaQueries';
 
-// 1. Props에 따라 동적으로 변할 수 있는 스타일을 위한 인터페이스 정의
+
 interface StyledLinkItemProps {
-  $theme: LinkTheme;
-  $disabled?: boolean;
-  to: string;
+    $theme: LinkTheme;
+    to: string;
+    $isLarge?: boolean;
+    $isOutLine?: boolean;
 }
 
-// 2. 테마별 스타일 속성을 담는 Map 객체 정의
 const themeStyles = {
-  primary: css`
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    &:hover { background-color: #0056b3; }
-  `,
-  catchPhrase: css`
-    color: black;
-    background-color: transparent;
-    &:hover { font-weight: bold; }
-  `,
+    primary: css`
+        padding: 10px 20px;
+        background-color: #0E76C4;
+        color: white;
+    `,
+    catchPhrase: css`
+        color: black;
+        background-color: transparent;
+    `,
+    emptyPrimary: css`
+        padding: 10px 20px;
+        background-color: transparent;
+        color: #0E76C4;
+        border: 2px solid #0E76C4;
+    `,
 };
 
 // 2. HTML 태그(a)를 감싸 스타일링된 컴포넌트 생성
 export const StyledLinkItem = styled.a<StyledLinkItemProps>`
-  /* 기본 스타일 */
-  border: none;
-  border-radius: 1rem;
-  font-size: 16px;
-  cursor: pointer;
+    /* 기본 스타일 */
+    border: none;
+    border-radius: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    ${(props) => themeStyles[props.$theme]}
 
-  transition: transform 0.3s ease-in-out, background-color 0.2s ease;
-  
-  &:hover {
-    color: black;
-    /* 3. 살짝 확대 */
-    transform: scale(1.05); 
-    
-    /* z-index를 높여서 다른 요소 위에 떠오르는 느낌 강조 */
-    z-index: 10; 
-  }
+    ${(props) =>
+        props.$isLarge &&
+        css`
+        width: 15rem;
+        
+        font-size: 18px !important;
+        `}
+        
+    ${(props) =>
+        props.$isOutLine &&
+        css`
+            background-color: transparent !important;
+            color: #0E76C4 !important;
+            border: 1px solid #0E76C4 !important;
+        `}
 
-  ${(props) => themeStyles[props.$theme]}
+    transition: transform 0.3s ease-in-out, background-color 0.2s ease;
 
-  /* 비활성화 상태 스타일 */
-  ${(props) =>
-    props.$disabled &&
-    `
-    cursor: not-allowed;
-    opacity: 0.6;
-  `}
+    &:hover {
+        color: black;
+        transform: scale(1.05); 
+        z-index: 10; 
+    }
+
 `;
