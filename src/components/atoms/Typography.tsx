@@ -9,6 +9,7 @@ export type TypographyVariant = 'h1' | 'h2' | 'h3' | 'body' | 'caption';
 export interface TypographyProps {
   children: React.ReactNode; // 텍스트 내용
   variant?: TypographyVariant; // 텍스트 변형
+  color?: string; // 텍스트 색상 --- IGNORE ---
   className?: string; // 외부에서 스타일 오버라이드를 위한 className
 }
 
@@ -16,11 +17,13 @@ export interface TypographyProps {
 const Typography: React.FC<TypographyProps> = ({
     children,
     variant = 'body',
+    color,
     className,
 }) => {
     return (
     <StyledTypography
         $variant={variant}
+        $color={color}
         className={className}
     >
         {children}
