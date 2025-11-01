@@ -6,9 +6,10 @@ import { tablet } from '../../styles/mixins/mediaQueries';
 
 interface StyledTypographyProps {
     $variant: TypographyVariant;
+    $color?: string;
 }
 export const StyledTypography = styled.span<StyledTypographyProps>`
-    color: black;
+    color: ${(props) => props.$color || 'inherit'};
 
     ${(props) => {
         switch (props.$variant) {
@@ -20,12 +21,12 @@ export const StyledTypography = styled.span<StyledTypographyProps>`
             case 'h2':
                 return css`
                     font-size: 2rem;
-                    font-weight: semi-bold;
+                    font-weight: bold;
                 `;
             case 'h3':
                 return css`
                     font-size: 1.5rem;
-                    font-weight: semi-bold;
+                    font-weight: bold;
             `;
             case 'body':
                 return css`

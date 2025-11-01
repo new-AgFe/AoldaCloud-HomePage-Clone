@@ -2,7 +2,7 @@
 
 import DefaultLayoutTemplate from '../../components/templates/DefaultLayoutTemplate';
 import LandingSection  from './components/LandingSection';
-// import { CountingSection } from './components/CountingSection';
+import CountingSection from './components/CountingSection';
 // import { ScrollIntroduceSection } from './components/ScrollIntroduceSection';
 // import { HorisonScrollSection } from './components/HorisonScrollSection';
 // import { CardViewSection1 } from './components/CardViewSection1';
@@ -15,7 +15,7 @@ const HomePage = () => {
     <DefaultLayoutTemplate>
       {/* HomePage만의 고유 콘텐츠 */}
       <LandingSection />
-      <section className='counting'></section>
+      <CountingSection />
       <section className='scroll-introduce'></section>
       <section className='horison-scroll'></section>
       <section className='card-view1'></section>
