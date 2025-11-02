@@ -1,12 +1,11 @@
 // src/components/atoms/LinkItem.styles.tsx
 
 import styled, { css } from 'styled-components';
-import { type LinkTheme } from './LinkItem';
-import { tablet } from '../../styles/mixins/mediaQueries';
+import { type LinkItemTheme } from './LinkItem';
 
 
 interface StyledLinkItemProps {
-    $theme: LinkTheme;
+    $theme: LinkItemTheme;
     to: string;
     $isLarge?: boolean;
     $isOutLine?: boolean;
@@ -42,9 +41,9 @@ export const StyledLinkItem = styled.a<StyledLinkItemProps>`
     ${(props) =>
         props.$isLarge &&
         css`
-        width: 15rem;
+            width: 15rem;
         
-        font-size: 18px !important;
+            font-size: 18px !important;
         `}
         
     ${(props) =>

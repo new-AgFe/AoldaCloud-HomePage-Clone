@@ -22,8 +22,8 @@ const Typography: React.FC<TypographyProps> = ({
 }) => {
     return (
     <StyledTypography
-        $variant={variant}
-        $color={color}
+        variant={variant}
+        color={color}
         className={className}
     >
         {children}

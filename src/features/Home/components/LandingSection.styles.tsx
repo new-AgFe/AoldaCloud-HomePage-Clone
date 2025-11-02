@@ -7,11 +7,13 @@ export const LandingSectionContainer = styled.section`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1400px;
     padding: 2rem 0;
 
     ${tablet(css`
-    flex-direction: column; /* 가로 -> 세로로 변경 */
-    gap: 30px; /* 이미지와 아래 블록 사이의 간격 추가 */
+        flex-direction: column; /* 가로 -> 세로로 변경 */
+        gap: 30px; /* 이미지와 아래 블록 사이의 간격 추가 */
     `)}
 `;
 
@@ -22,9 +24,9 @@ export const ImageWrapper = styled.div`
     padding-left: 1.5rem;
 
     ${tablet(css`
-    width: 100%;
-    flex: none;
-    padding: 0 1.5rem;
+        width: 100%;
+        flex: none;
+        padding: 0 1.5rem;
     `)}
 `;
 export const BlockWrapper = styled.div`
