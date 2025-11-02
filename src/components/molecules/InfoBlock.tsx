@@ -4,7 +4,7 @@ import React from 'react';
 import Typography, {type TypographyVariant} from '../atoms/Typography';
 import LinkItem, { type LinkItemTheme } from '../atoms/LinkItem';
 import useMediaQuery from '../../hooks/useMediaQuery';
-import { InfoBlockContainer, TextContainer, LinkItemContainer, type InfoBlockTheme } from './InfoBlock.styles';
+import { StyledInfoBlock, TextContainer, LinkItemContainer, type InfoBlockTheme } from './InfoBlock.styles';
 
 export interface InfoBlockProps {
     title: React.ReactNode;
@@ -48,7 +48,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
 
     if ($theme === 'catchPhrase') {
         return (
-            <InfoBlockContainer $theme={$theme}>
+            <StyledInfoBlock $theme={$theme}>
                 <TextContainer $theme={linkThemeToApply}>
                     <Typography variant={TypographyVariant}>{title}</Typography>
                     {description && <Typography variant={TypographyVariant}>{description}</Typography>}
@@ -56,12 +56,12 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
                 <LinkItemContainer>
                     <LinkItem theme={linkThemeToApply} to={linkUrl} {...dynamicLinkProps}>{buttonLabel}</LinkItem>
                 </LinkItemContainer>
-            </InfoBlockContainer>
+            </StyledInfoBlock>
         );
     }
 
     return (
-        <InfoBlockContainer $theme={$theme}>
+        <StyledInfoBlock $theme={$theme}>
             <TextContainer $theme={linkThemeToApply}>
                 <Typography variant={TypographyVariant}>{title}</Typography>
                 {description && <Typography variant={TypographyVariant}>{description}</Typography>}
@@ -69,7 +69,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
             <LinkItemContainer $theme={linkThemeToApply}>
                 <LinkItem theme={linkThemeToApply} to={linkUrl}>{buttonLabel}</LinkItem>
             </LinkItemContainer>
-        </InfoBlockContainer>
+        </StyledInfoBlock>
     );
 };
 

@@ -1,8 +1,8 @@
 // src/components/molecules/Card.styles.tsx
 
-import styled from 'styled-components';
+import styled from 'styled-components'; 
 
-export const CardContainer = styled.div`
+export const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;

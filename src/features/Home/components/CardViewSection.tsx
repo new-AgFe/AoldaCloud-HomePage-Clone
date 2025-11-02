@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Card from '../../../components/molecules/Card';
-import { CardViewSectionContainer, CardsWrapper } from './CardViewSection.styles';
+import { StyledCardViewSection, CardsWrapper } from './CardViewSection.styles';
 import Typography from '../../../components/atoms/Typography';
 import ImgNoCredit from "../../../assets/ImgNoCredit.png";
 import ImgDataServer from "../../../assets/ImgDataServer.png";
@@ -24,7 +24,7 @@ const CardViewSection: React.FC<CardViewSectionProps> = ({ theme }) => {
     if (theme === 'blue') {
         color = '#0E76C4';
         return (
-            <CardViewSectionContainer>
+            <StyledCardViewSection>
                 <GrayBar />
                 <div style={{display: 'flex', flexDirection: 'column', width: '18rem', textAlign: 'left'}}>
                     <Typography variant="h2" color='#666'>자유롭게 꿈을 펼치기 위해<br/>아올다가 없앤 
@@ -56,12 +56,12 @@ const CardViewSection: React.FC<CardViewSectionProps> = ({ theme }) => {
                         $color={color}
                     />
                 </CardsWrapper>
-            </CardViewSectionContainer>
+            </StyledCardViewSection>
         );
     } else {
         color = '#C40E0E';
         return (
-            <CardViewSectionContainer>
+            <StyledCardViewSection>
                 <GrayBar />
                 <div style={{display: 'flex', flexDirection: 'column', width: '18rem', textAlign: 'left'}}>
                     <Typography variant="h2" color='#666'>자유롭게 꿈을 펼치기 위해<br/>함께 만들어가는
@@ -93,7 +93,7 @@ const CardViewSection: React.FC<CardViewSectionProps> = ({ theme }) => {
                         $color={color}
                     />
                 </CardsWrapper>
-            </CardViewSectionContainer>
+            </StyledCardViewSection>
         );
     }
 

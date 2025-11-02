@@ -4,9 +4,8 @@ import DefaultLayoutTemplate from '../../components/templates/DefaultLayoutTempl
 import LandingSection  from './components/LandingSection';
 import CountingSection from './components/CountingSection';
 // import { ScrollIntroduceSection } from './components/ScrollIntroduceSection';
-// import { HorisonScrollSection } from './components/HorisonScrollSection';
+import HorisonScrollSection from './components/HorisonScrollSection';
 import CardViewSection from './components/CardViewSection';
-// import { CardViewSection2 } from './components/CardViewSection2';
 import LastPageSection from './components/LastPageSection';
 
 const HomePage = () => {
@@ -17,7 +16,7 @@ const HomePage = () => {
       <LandingSection />
       <CountingSection />
       <section className='scroll-introduce'></section>
-      <section className='horison-scroll'></section>
+      <HorisonScrollSection />
       <CardViewSection theme='blue' />
       <CardViewSection theme='red' />
       <LastPageSection />
