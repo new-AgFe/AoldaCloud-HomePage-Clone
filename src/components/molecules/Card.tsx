@@ -1,7 +1,7 @@
 // src/components/molecules/Card.tsx
 
 import React from 'react';
-import { CardContainer, CardContent } from './Card.styles';
+import { StyledCard, CardContent } from './Card.styles';
 import Typography from '../atoms/Typography';
 import Image from '../atoms/Image';
 
@@ -14,13 +14,13 @@ export interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imageSrc, title, description, $color }) => {
     return (
-        <CardContainer>
+        <StyledCard>
             <Image src={imageSrc} alt={title} width="5rem" height="auto" />
             <CardContent>
                 <Typography variant="h3" color={$color}>{title}</Typography>
                 <Typography variant="caption" color='#666'>{description}</Typography>
             </CardContent>
-        </CardContainer>
+        </StyledCard>
     );
 };
 

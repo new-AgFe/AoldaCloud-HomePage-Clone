@@ -25,7 +25,7 @@ const themeStylesMap = {
     `,
 };
 
-export const InfoBlockContainer = styled.div<StyledInfoBlockProps>`
+export const StyledInfoBlock = styled.div<StyledInfoBlockProps>`
     display: flex;
     flex-direction: column;
     padding: 1rem;

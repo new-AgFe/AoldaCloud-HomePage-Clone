@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import { tablet } from '../../styles/mixins/mediaQueries';
 
-export const FooterContainer = styled.footer`
+export const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;

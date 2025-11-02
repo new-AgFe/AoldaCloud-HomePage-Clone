@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import { tablet } from '../../../styles/mixins/mediaQueries';
 
-export const LandingSectionContainer = styled.section`
+export const StyledLandingSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: flex-start;

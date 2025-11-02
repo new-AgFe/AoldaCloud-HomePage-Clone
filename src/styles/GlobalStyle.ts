@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* 가로 스크롤 방지 */
+    overflow-x: auto; /* 가로 스크롤 방지 */
     overflow-y: auto;
   }
 

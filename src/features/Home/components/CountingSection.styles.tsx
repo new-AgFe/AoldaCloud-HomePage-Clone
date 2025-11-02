@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 import { tablet } from '../../../styles/mixins/mediaQueries';
 
-export const CountingSectionContainer = styled.div`
+export const StyledCountingSection = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 1400px;

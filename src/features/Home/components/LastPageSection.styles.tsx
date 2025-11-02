@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 import { tablet } from '../../../styles/mixins/mediaQueries';
 
-export const LastPageSectionContainer = styled.section`
+export const StyledLastPageSection = styled.section`
     display: flex;
     flex-direction: column;
     max-width: 1400px;

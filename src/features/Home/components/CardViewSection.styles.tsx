@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-export const CardViewSectionContainer = styled.div`
+export const StyledCardViewSection = styled.div`
     padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
