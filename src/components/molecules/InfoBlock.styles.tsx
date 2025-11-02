@@ -46,21 +46,41 @@ export const InfoBlockContainer = styled.div<StyledInfoBlockProps>`
     }
 `;
 
-export const TextContainer = styled.div`
+interface TextContainerProps{
+    $theme?: string;
+}
+
+export const TextContainer = styled.div<TextContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     text-align: left;
 
+    ${(props) => props.$theme === 'primary' && css`
+        align-items: center;
+        text-align: center;
+        
+    `}
+
     ${tablet(css`
         align-items: center;
         text-align: center;
     `)}
 `;
-export const LinkItemContainer = styled.div`
+
+interface LinkItemContainerProps{
+    $theme?: string;
+}
+export const LinkItemContainer = styled.div<LinkItemContainerProps>`
     display: flex;
     justify-content: flex-end;
+
+    ${(props) => props.$theme === 'primary' && css`
+        align-items: center;
+        justify-content: center;
+        
+    `}
 
     ${tablet(css`
         align-items: center;

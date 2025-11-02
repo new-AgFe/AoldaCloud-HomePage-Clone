@@ -5,9 +5,9 @@ import LandingSection  from './components/LandingSection';
 import CountingSection from './components/CountingSection';
 // import { ScrollIntroduceSection } from './components/ScrollIntroduceSection';
 // import { HorisonScrollSection } from './components/HorisonScrollSection';
-// import { CardViewSection1 } from './components/CardViewSection1';
+import CardViewSection from './components/CardViewSection';
 // import { CardViewSection2 } from './components/CardViewSection2';
-// import { LastPageSection } from './components/LastPageSection';
+import LastPageSection from './components/LastPageSection';
 
 const HomePage = () => {
   return (
@@ -18,9 +18,9 @@ const HomePage = () => {
       <CountingSection />
       <section className='scroll-introduce'></section>
       <section className='horison-scroll'></section>
-      <section className='card-view1'></section>
-      <section className='card-view2'></section>
-      <section className='last-page'></section>
+      <CardViewSection theme='blue' />
+      <CardViewSection theme='red' />
+      <LastPageSection />
     </DefaultLayoutTemplate>
   );
 };
