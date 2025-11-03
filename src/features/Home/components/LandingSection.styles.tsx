@@ -17,6 +17,28 @@ export const StyledLandingSection = styled.section`
     `)}
 `;
 
+export const TypographyWrapper = styled.div`
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    // transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    text-align: left;
+    // width: 80%;
+    
+    ${tablet(css`
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        z-index: auto;
+        color: black;
+        width: 100%;
+        margin-bottom: 1rem;
+    `)}
+`;
+
 export const ImageWrapper = styled.div`
     flex: 9;
     position: relative;
@@ -26,6 +48,7 @@ export const ImageWrapper = styled.div`
     ${tablet(css`
         width: 100%;
         flex: none;
+        flex-direction: column;
         padding: 0 1.5rem;
     `)}
 `;
