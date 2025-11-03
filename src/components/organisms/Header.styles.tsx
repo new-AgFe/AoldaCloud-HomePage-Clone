@@ -10,8 +10,8 @@ interface StyledHeaderProps {
 export const StyledHeader = styled.header<StyledHeaderProps>`
   position: fixed;
   display: flex;
-  width: calc(100% - 2rem); // 좌우 여백 고려
-  max-width: 1200px; // 최대 너비 설정
+  width: calc(100% - 2rem);
+  max-width: 1200px;
   border-radius: 1rem;
   left: 50%;
   transform: translateX(-50%);
@@ -21,7 +21,7 @@ export const StyledHeader = styled.header<StyledHeaderProps>`
   padding: 1rem 1.5rem;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.2s ease-in-out; // 부드러운 전환 효과
+  transition: all 0.2s ease-in-out;
 
   .center-menu {
       flex-grow: 1;

@@ -6,6 +6,6 @@ export const StyledNav = styled.nav`
   display: flex;
   align-items: center; 
   justify-content: center; 
-  gap: 20px; /* 링크들 사이의 간격 */
+  gap: 20px;
   flex-grow: 1; 
 `;
