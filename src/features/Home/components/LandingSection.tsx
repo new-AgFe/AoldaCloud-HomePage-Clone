@@ -4,12 +4,16 @@ import React from 'react';
 import Image from '../../../components/atoms/Image';
 import LandingImage from '../../../assets/schoolImg.png';
 import InfoBlock from '../../../components/molecules/InfoBlock';
-import { StyledLandingSection, ImageWrapper, BlockWrapper } from './LandingSection.styles';
+import Typography from '../../../components/atoms/Typography';
+import { StyledLandingSection, ImageWrapper, BlockWrapper, TypographyWrapper } from './LandingSection.styles';
 
 const LandingSection: React.FC = () => {
     return (
         <StyledLandingSection>
             <ImageWrapper>
+                <TypographyWrapper>
+                    <Typography variant='h2'>아주인의 꿈을 펼칠 <br />파란하늘 속 작은구름</Typography>
+                </TypographyWrapper>
                 <Image src={LandingImage} alt="Landing Image" width="100%" height='28rem' />
             </ImageWrapper>
             <BlockWrapper>
