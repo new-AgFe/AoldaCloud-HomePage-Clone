@@ -10,6 +10,11 @@ export const StyledLastPageSection = styled.section`
     margin: 0 auto;
     align-items: center;
     padding: 4rem 0;
+
+    ${tablet`
+        align-items: flex-start;
+        padding: 2rem;
+    `}
 `;
 
 export const TypographyContainer = styled.div`
@@ -22,7 +27,6 @@ export const TypographyContainer = styled.div`
     ${tablet`
         display: flex;
         align-items: flex-start;
-        padding-left: 1.5rem;
     `}
 `;
 
