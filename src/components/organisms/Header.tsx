@@ -10,7 +10,7 @@ import Button from '../atoms/Button';
 
 interface HeaderProps {
     isMenuOpen: boolean;
-    toggleMenu: () => void; // 👈 함수를 Props로 받습니다.
+    toggleMenu: () => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
@@ -18,9 +18,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
   const isScrolled = useScrollDetection(30);
 
   return (
-    // 👈 Styled Component에 $isScrolled Props 전달
     <StyledHeader $isScrolled={isScrolled}>
-      {/* 👈 헤더 내부의 모든 콘텐츠를 StyledContainer로 감쌉니다. */}
         <div className="logo-area">
           <Image src={Logo} alt="로고" height="100%" />
         </div>
@@ -35,7 +33,6 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, toggleMenu }) => {
 
         <div className="hamburger-menu">
           <Button theme="ghost" onClick={toggleMenu}>
-            {/* 햄버거 아이콘 또는 닫기 아이콘 */}
             {isMenuOpen ? 'X' : '☰'} 
           </Button>
         </div>

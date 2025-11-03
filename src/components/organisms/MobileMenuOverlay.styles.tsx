@@ -33,7 +33,6 @@ export const StyledNavList = styled.nav`
     gap: 1rem;
     align-items: flex-end;
 
-    /* 모바일 메뉴 내부 LinkItem 스타일 조정 (선택 사항) */
     a {
         display: inline-block;
         text-align: right;

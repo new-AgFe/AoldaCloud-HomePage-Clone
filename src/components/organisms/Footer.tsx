@@ -8,7 +8,6 @@ import { StyledFooter, ImageContainer, InfoContainer } from './Footer.styles';
 const Footer = () => {
     return (
         <StyledFooter>
-            {/* ... 다른 UI 요소 */}
             <ImageContainer>
                 <Image src={LogoWhite} alt="Logo" width='10rem' />
                 <Typography variant="caption" color="#A1B3C4">교내 클라우드 인프라 개발/운영 소학회</Typography>

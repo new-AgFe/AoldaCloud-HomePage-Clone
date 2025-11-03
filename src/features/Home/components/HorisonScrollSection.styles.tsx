@@ -30,7 +30,6 @@ export const StyledScrollContainer = styled.div<StyledScrollContainerProps>`
         flex-direction: column; 
         overflow-x: hidden;
         overflow-y: scroll;
-        /* ... 기타 모바일 스타일 ... */
     `}
 `;
 
@@ -40,8 +39,8 @@ export const StyledScrollWrapper = styled.div<{ $isVertical: boolean }>`
     flex-direction: column; 
 
     ${(props) => props.$isVertical && css`
-        height: 400px; /* 모바일에서 고정 높이 지정 */
-        overflow-y: scroll; /* 세로 스크롤 허용 */
+        height: 400px
+        overflow-y: scroll;
         overflow-x: hidden;
     `}
 `;

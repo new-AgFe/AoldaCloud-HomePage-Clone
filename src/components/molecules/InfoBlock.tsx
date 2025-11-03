@@ -25,7 +25,6 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
 }) => {
     const isTablet = useMediaQuery(); 
     
-    // 2. InfoBlock 테마에 따라 LinkItem에 적용할 테마를 결정
     let linkThemeToApply : LinkItemTheme;
 
     if (isTablet) {
