@@ -82,7 +82,7 @@ const HorisonScrollSection: React.FC = () => {
     return (
         <StyledHorisonScrollSection>
             <GrayBar />
-            <div style={{display: 'flex', flexDirection: 'column', width: '20rem', textAlign: 'left'}}>
+            <div style={{display: 'flex', flexDirection: 'column', width: '20rem', textAlign: 'left', marginTop: '1.5rem'}}>
                 <Typography variant="h2" color='#666'>
                     이미
                     <Typography variant="h2" color='#0E76C4'> 많은 곳에서 사용</Typography>
