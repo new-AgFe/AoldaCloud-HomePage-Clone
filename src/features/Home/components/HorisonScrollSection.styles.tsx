@@ -24,6 +24,10 @@ export const StyledScrollContainer = styled.div<StyledScrollContainerProps>`
     overflow-x: auto;
     overflow-y: hidden;
     gap: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
     
     /* 3. 모바일 세로 전환 로직 (이제 $isTablet을 사용할 수 있습니다!) */
     ${(props) => props.$isTablet && css`
@@ -36,7 +40,10 @@ export const StyledScrollContainer = styled.div<StyledScrollContainerProps>`
 export const StyledScrollWrapper = styled.div<{ $isVertical: boolean }>`
     display: flex;
     margin: 0 auto;
-    flex-direction: column; 
+    flex-direction: column;
+    scrollbar-width: 0px;
+
+    
 
     ${(props) => props.$isVertical && css`
         height: 400px
