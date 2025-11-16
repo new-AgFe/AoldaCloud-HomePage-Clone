@@ -9,6 +9,7 @@ export interface ImageProps {
   width?: string;
   height?: string;
   bright?: string;
+  fit?: boolean;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ const Image: React.FC<ImageProps> = ({
   width,
   height,
   bright,
+  fit,
   className,
 }) => {
   return (
@@ -27,6 +29,7 @@ const Image: React.FC<ImageProps> = ({
       width={width}
       height={height}
       bright={bright}
+      fit={fit}
       className={className}
     />
   );
