@@ -8,6 +8,7 @@ export interface ImageProps {
   alt: string;
   width?: string;
   height?: string;
+  bright?: string;
   className?: string;
 }
 
@@ -16,6 +17,7 @@ const Image: React.FC<ImageProps> = ({
   alt,
   width,
   height,
+  bright,
   className,
 }) => {
   return (
@@ -24,6 +26,7 @@ const Image: React.FC<ImageProps> = ({
       alt={alt}
       width={width}
       height={height}
+      bright={bright}
       className={className}
     />
   );

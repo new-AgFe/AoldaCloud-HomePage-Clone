@@ -3,7 +3,7 @@
 import DefaultLayoutTemplate from '../../components/templates/DefaultLayoutTemplate';
 import LandingSection  from './components/LandingSection';
 import CountingSection from './components/CountingSection';
-// import { ScrollIntroduceSection } from './components/ScrollIntroduceSection';
+import ScrollIntroduceSection from './components/ScrollIntroduceSection';
 import HorisonScrollSection from './components/HorisonScrollSection';
 import CardViewSection from './components/CardViewSection';
 import LastPageSection from './components/LastPageSection';
@@ -15,7 +15,7 @@ const HomePage = () => {
       {/* HomePage만의 고유 콘텐츠 */}
       <LandingSection />
       <CountingSection />
-      <section className='scroll-introduce'></section>
+      <ScrollIntroduceSection />
       <HorisonScrollSection />
       <CardViewSection theme='blue' />
       <CardViewSection theme='red' />
