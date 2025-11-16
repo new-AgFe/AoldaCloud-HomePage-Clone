@@ -17,8 +17,14 @@ const ScrollIntroduceSection: React.FC = ({}) => {
                 </Typography>
             </TypographyWrapper>
             <ImageWrapper>
-                <Image src={consoleImg} alt="Introduction Image" width="1800px" height="auto" bright="70%"/>
+                <Image src={consoleImg}
+                    alt="Introduction Image"
+                    width="1800px"
+                    height="auto"
+                    bright="70%"
+                />
             </ImageWrapper>
+            
         </StyledScrollIntroduceSection>
     );
 };

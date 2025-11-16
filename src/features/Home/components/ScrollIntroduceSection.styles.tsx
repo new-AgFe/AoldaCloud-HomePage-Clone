@@ -20,6 +20,7 @@ export const StyledScrollIntroduceSection = styled.section`
         flex-direction: column;
         justify-content: left;
         align-items: flex-start;
+        gap: 1.5rem;
     `}
 `;
 export const ImageWrapper = styled.div`

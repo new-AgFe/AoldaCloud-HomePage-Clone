@@ -34,6 +34,8 @@ export const StyledScrollContainer = styled.div<StyledScrollContainerProps>`
         flex-direction: column; 
         overflow-x: hidden;
         overflow-y: scroll;
+        justify-content: center;
+        align-items: center;
     `}
 `;
 

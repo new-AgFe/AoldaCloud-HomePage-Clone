@@ -1,6 +1,7 @@
 // src/components/molecules/Customer.styles.tsx
 
 import styled from "styled-components";
+import { tablet } from "../../styles/mixins/mediaQueries";
 
 export const StyledCustomer = styled.div`
     display: flex;
@@ -12,6 +13,11 @@ export const StyledCustomer = styled.div`
     border: 1px solid #eee; 
     border-radius: 8px;
     flex-shrink: 0;
+
+    ${tablet`
+        width: 25rem;
+        justify-content: center;
+    `}
 `;
 
 export const StyledImage = styled.div`
@@ -31,4 +37,8 @@ export const CustomerContent = styled.div`
     justify-content: center;
     text-align: left;
     flex-grow: 1;
+
+    ${tablet`
+        text-align: center;
+    `}   
 `;
